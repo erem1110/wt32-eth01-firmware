@@ -1,0 +1,26 @@
+# PlatformIO build outputs and dependencies
+.pio/
+.pioenvs/
+.piolibdeps/
+
+# IDE & Editor files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Binary files
+*.bin
+*.elf
+*.hex
+
+# OS files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+
+# Local secrets & test scripts with credentials
+*.env
+secrets.h
+test_*.py
+ota_updater.py
