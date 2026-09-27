@@ -14,6 +14,11 @@ Production-grade, standalone ESP32 firmware for the **WT32-ETH01** board targeti
 | RMII CLK (REF_CLK) | GPIO 0 | 50 MHz Input (`ETH_CLOCK_GPIO0_IN`) |
 | PHY Power / Oscillator Enable | GPIO 16 | External Crystal Oscillator Power Enable |
 | PHY I2C/SMI Address | 1 | LAN8720 PHY Address |
+| Hardware Factory Reset (GPIO 32 - CFG pin):
+| If the device's IP address or password is forgotten, simply short the GPIO 32 (CFG) pin to GND.
+| During startup (boot): hold for 5 seconds.
+| During operation: hold for 8 seconds.
+| The system will completely reset all 12 NVS partitions (Factory Reset) and reboot to its factory state.
 
 ### I2C Bus
 | Signal | ESP32 Pin | Bus Speed |
